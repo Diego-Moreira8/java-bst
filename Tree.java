@@ -46,4 +46,22 @@ public class Tree {
         }
     }
 
+    public void insert(int content) {
+        this.root = insertRecursive(this.root, content);
+    }
+
+    private Node insertRecursive(Node root, int content) {
+        if (root == null) {
+            root = new Node(content);
+            return root;
+        }
+
+        if (content < root.getContent()) {
+            root.setLeft(insertRecursive(root.getLeft(), content));
+        } else if (content > root.getContent()) {
+            root.setRight(insertRecursive(root.getRight(), content));
+        }
+
+        return root;
+    }
 }
