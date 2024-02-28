@@ -33,10 +33,7 @@ public class Tree {
     }
 
     public void prettyPrint(Node node, String prefix, boolean isLeft) {
-        /*
-         * Prints the tree in a structured format.
-         * Made by the awesome people from TheOdinProject.com
-         */
+        // Prints the tree in a structured format.
         if (node.getRight() != null) {
             prettyPrint(node.getRight(), prefix + (isLeft ? "│   " : "    "), false);
         }
