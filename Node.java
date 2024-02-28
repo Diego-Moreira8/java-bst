@@ -24,4 +24,12 @@ public class Node {
     public void setContent(int content) {
         this.content = content;
     }
+
+    public void setLeft(Node left) {
+        this.left = left;
+    }
+
+    public void setRight(Node right) {
+        this.right = right;
+    }
 }
